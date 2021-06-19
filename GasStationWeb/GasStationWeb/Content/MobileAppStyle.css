@@ -1,0 +1,62 @@
+﻿body {
+}
+
+.mobilecontainer {
+    display: inline-block;
+    margin-top: 2%;
+    /*margin-left:12%;*/
+    width: 1200px;
+    height: 500px;
+    background-image: url("Images/bannerapp.png");
+    background-size: cover;
+}
+
+.row h4 {
+    margin: auto;
+    font-weight: 700;
+    padding-left: 20%;
+    padding-top: 5%;
+}
+
+.row i {
+    margin: auto;
+    padding-left: 35%;
+}
+
+.col-md-4 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.fa-dollar-sign {
+    /*background-color: blueviolet;*/
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+.col-sm-6 {
+    padding-left: 10%;
+    padding-top: 3%;
+}
+
+.row:nth-child(2) {
+    padding-left: 0%;
+    padding-top: 10%;
+}
+
+.col-sm-6 img {
+    height: 500px;
+}
+
+#header1 {
+    padding-left: 25%;
+    height: 200px;
+}
+
+#header2 {
+}
+
+#img2 {
+    padding-left: 25%;
+}

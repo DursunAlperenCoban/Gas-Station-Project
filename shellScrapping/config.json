@@ -1,0 +1,8 @@
+{
+  "sqlserver":{
+  "server":"DSK6",
+  "user": "sa",
+  "passwd": "1234",
+  "db": "GasStation"
+}
+}

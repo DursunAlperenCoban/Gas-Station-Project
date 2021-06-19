@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "Map";
+
+}
+<link rel="stylesheet" href="~/Content/default.css" />
+<link rel="stylesheet" href="~/Content/responsive.css" />
+<link rel="stylesheet" href="~/Content/InteractiveMapStyle.css" />
+
+<div id="page" class="mm-slideout">
+
+
+    <section id="mapwrp">
+        <div class="table-container">
+            <div id="map">
+                <svg height="450" version="1.1" width="1050" xmlns="http://www.w3.org/2000/svg"
+                     style="overflow: hidden; position: relative; left: -0.5px">
+                    <desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)">
+                        Created with Raphaël 2.1.2
+                    </desc>
+                    <defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0)"></defs>
+                    <path fill="#bbbbbb" stroke="#ffffff" d="M0,0" stroke-width="0.2" stroke-linejoin="round" style="
+                      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                      stroke-linejoin: round;
+                    "></path>
+
+                </svg>
+                <div class="cities">
+                    @*Fill area with raphael*@
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <div class="row">
+        <div class="col-md-6 inmapcontainer">
+
+
+            <div class="select-box">
+                <h2>District</h2>
+                <div class="options-container" id="districts">
+                    <div class="option">
+                        <input type="radio"
+                               class="radio"
+                               id="all"
+                               name="category" />
+                        <label for="">Select City </label>
+                    </div>
+
+                </div>
+                <div class="selected">
+                    Select City from Map
+                </div>
+                <label hidden id="distid">xhr</label>
+            </div>
+        </div>
+
+        <div class="col-md-6 inmapcontainer">
+
+
+
+            <div class="select-box2">
+                <h2>Pick A Brand</h2>
+                <div class="options-container2">
+                    <div class="option2">
+                        <input type="radio" class="radio" id="bp" name="category" />
+                        <label for="bp">BP</label>
+                    </div>
+                    <div class="option2">
+                        <input type="radio" class="radio" id="opet" name="category" />
+                        <label for="opet">Opet</label>
+                    </div>
+                    <div class="option2">
+                        <input type="radio" class="radio" id="shell" name="category" />
+                        <label for="shell">Shell</label>
+                    </div>
+                    <div class="option2">
+                        <input type="radio" class="radio" id="total" name="category" />
+                        <label for="total">Total</label>
+                    </div>
+                    <div class="option2">
+                        <input type="radio" class="radio" id="turkpetrol" name="category" />
+                        <label for="turkpetrol">Türkiye Petrolleri</label>
+                    </div>
+
+                </div>
+                <div class="selected2" id="">
+                    Select Brand
+                </div>
+
+            </div>
+        </div>
+        
+            <div class="loader-wrapper">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        
+    </div>
+    <div class="row">
+        
+        <div class="col-md-3 container-fluid">
+            <div class="loader2-wrapper">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <table class="price-table table">
+                <tr>
+                    <th>Benzin</th>
+                    <th>Motorin</th>
+                    <th>Otogaz</th>
+                </tr>
+
+
+                <tr id="prices">
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="~/Scripts/jquery-3.6.0.min.js"></script>
+
+<script type="text/javascript" src="~/Scripts/raphael-min.js"></script>
+<script type="text/javascript" src="~/Scripts/paths.js"></script>
+<script type="text/javascript" src="~/Scripts/turkiye.js"></script>
+<script src="~/Scripts/InteractiveMapScript.js"></script>
+
+
+<script>
+    $(window).on("load", function () {
+        $("#mapwrp").css("display", "none");
+        $(".loader-wrapper").fadeIn("slow");
+        $(".loader-wrapper").fadeOut("slow");
+        $("#mapwrp").delay(1050).fadeIn("slow");
+    });
+</script>
+
+
+
+

@@ -1,0 +1,38 @@
+﻿#mapwrp{padding:30px 0; margin-top:20px;}
+#mapwrp h2, #results h2, #stationresults h2, #mapFilter h2{font-size:1rem; text-align:center; margin-bottom:30px; font-weight:600; padding:0 20px;}
+#stationresults h2{font-size:1.35rem;}
+#map{width:1050px;position:relative;margin:0 auto; height:450px; overflow: hidden;}
+#map svg {position: relative;top: -140px !important; left: 0px; width:100%; height:590px; zoom:1;}
+#map svg path, #map svg circle{cursor:pointer;}
+#mapFilter{background:#f1f1f2; margin-top:20px;}
+#mapFilter form{padding:30px; max-width:1050px; margin:0 auto;}
+#mapHeadquarter{height:250px; width:100%;}
+.draggable{cursor:move;}
+.cities{position:absolute; left:0; top:0; width:1px; height:1px; overflow:visible; zoom:1;}
+.cityname{position:absolute; font-size:12px; color:#000; font-weight:800; text-shadow:.5px .5px .5px rgba(255,255,255,.5);text-decoration: none;}
+
+#results, #stationresults{padding:20px; background:#f1f1f2; margin-top:30px;}
+#results h2{text-align:left; padding-left:0;}
+#results h6{font-size:12px;}
+.pricetable table{margin:0;}
+.pricetable thead tr th{background:#4797f1; color:#FFF; font-size:0.6875rem; font-weight:600; text-align:center; border-color:#f1f1f2}
+.pricetable tbody tr td{background:#FFF; color:#0f2149; font-size:1.1875rem; text-align:center; border-color:#f1f1f2; border-top-width:10px; white-space:nowrap;}
+#filter{margin:30px 0;}
+#filter h3{display:none;}
+#frmOilPrices{padding-right:70px; position:relative;}
+#frmOilPrices label{font-size:13px; font-weight:600;}
+#frmOilPrices .submitbtn{position:absolute; bottom:0; right:0;}
+label.error{color:#da221a;}
+
+.station{background:#FFF; margin-top:30px; padding:10px; color:#0f2149; font-size:0.9rem;}
+.station .col-md-8{padding:20px 40px;}
+.station a{color:#0f2149; font-weight:600; display:block;}
+.station h3{font-size:1.125rem; font-weight:600; line-height:2rem; position:relative; padding-left:45px;}
+.station h3:before{display:block; background:url(../img/station-ico.png) center top no-repeat; width:35px; height:32px; content:""; position:absolute; left:0; top:0;}
+.station .address, .station .phone, .station .map{margin-top:20px; line-height:1.5rem; position:relative; padding-left:45px;}
+.station .address:before, .station .phone:before, .station .map:before{font-family:"FontAwesome"; font-size:1.25rem; display:inline-block; width:35px; color:#3971ff; content:"";  position:absolute; left:0; top:0;}
+.station .address:before{content:"\f041";}
+.station .phone:before{content:"\f095";}
+.station .map:before{content:"\f278";}
+.googlemap{position:absolute; right:15px; top:0; bottom:0; width:100%;}
+.station .vis{width: 60px;height: auto;position: absolute; top:0; right:30px;}

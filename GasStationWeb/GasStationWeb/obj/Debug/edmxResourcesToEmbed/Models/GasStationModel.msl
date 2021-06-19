@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GasStationModelStoreContainer" CdmEntityContainer="GasStationEntities">
+    <EntitySetMapping Name="Ilceler">
+      <EntityTypeMapping TypeName="GasStationModel.Ilceler">
+        <MappingFragment StoreEntitySet="Ilceler">
+          <ScalarProperty Name="IlceID" ColumnName="IlceID" />
+          <ScalarProperty Name="IlID" ColumnName="IlID" />
+          <ScalarProperty Name="Ilce" ColumnName="Ilce" />
+          <ScalarProperty Name="Ilceen" ColumnName="Ilceen" />
+          <ScalarProperty Name="Ilceop" ColumnName="Ilceop" />
+          <ScalarProperty Name="Ilcebp" ColumnName="Ilcebp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Iller">
+      <EntityTypeMapping TypeName="GasStationModel.Iller">
+        <MappingFragment StoreEntitySet="Iller">
+          <ScalarProperty Name="IlID" ColumnName="IlID" />
+          <ScalarProperty Name="Il" ColumnName="Il" />
+          <ScalarProperty Name="Ilen" ColumnName="Ilen" />
+          <ScalarProperty Name="Ilop" ColumnName="Ilop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="archive">
+      <EntityTypeMapping TypeName="GasStationModel.archive">
+        <MappingFragment StoreEntitySet="archive">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="benzin" ColumnName="benzin" />
+          <ScalarProperty Name="motorin" ColumnName="motorin" />
+          <ScalarProperty Name="otogaz" ColumnName="otogaz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BP">
+      <EntityTypeMapping TypeName="GasStationModel.BP">
+        <MappingFragment StoreEntitySet="BP">
+          <ScalarProperty Name="IlceID" ColumnName="IlceID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="benzin" ColumnName="benzin" />
+          <ScalarProperty Name="motorin" ColumnName="motorin" />
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+          <ScalarProperty Name="otogaz" ColumnName="otogaz" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Opet">
+      <EntityTypeMapping TypeName="GasStationModel.Opet">
+        <MappingFragment StoreEntitySet="Opet">
+          <ScalarProperty Name="IlceID" ColumnName="IlceID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="benzin" ColumnName="benzin" />
+          <ScalarProperty Name="motorin" ColumnName="motorin" />
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shell">
+      <EntityTypeMapping TypeName="GasStationModel.Shell">
+        <MappingFragment StoreEntitySet="Shell">
+          <ScalarProperty Name="IlceID" ColumnName="IlceID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="benzin" ColumnName="benzin" />
+          <ScalarProperty Name="motorin" ColumnName="motorin" />
+          <ScalarProperty Name="otogaz" ColumnName="otogaz" />
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Total">
+      <EntityTypeMapping TypeName="GasStationModel.Total">
+        <MappingFragment StoreEntitySet="Total">
+          <ScalarProperty Name="IlceID" ColumnName="IlceID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="benzin" ColumnName="benzin" />
+          <ScalarProperty Name="motorin" ColumnName="motorin" />
+          <ScalarProperty Name="otogaz" ColumnName="otogaz" />
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="turkPetrol">
+      <EntityTypeMapping TypeName="GasStationModel.turkPetrol">
+        <MappingFragment StoreEntitySet="turkPetrol">
+          <ScalarProperty Name="IlceID" ColumnName="IlceID" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="benzin" ColumnName="benzin" />
+          <ScalarProperty Name="motorin" ColumnName="motorin" />
+          <ScalarProperty Name="otogaz" ColumnName="otogaz" />
+          <ScalarProperty Name="ilce" ColumnName="ilce" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="addtest" FunctionName="GasStationModel.Store.addtest" />
+    <FunctionImportMapping FunctionImportName="AddtoBP" FunctionName="GasStationModel.Store.AddtoBP" />
+    <FunctionImportMapping FunctionImportName="AddtoBPLpg" FunctionName="GasStationModel.Store.AddtoBPLpg" />
+    <FunctionImportMapping FunctionImportName="AddtoOpet" FunctionName="GasStationModel.Store.AddtoOpet" />
+    <FunctionImportMapping FunctionImportName="AddtoShell" FunctionName="GasStationModel.Store.AddtoShell" />
+    <FunctionImportMapping FunctionImportName="AddtoTotal" FunctionName="GasStationModel.Store.AddtoTotal" />
+    <FunctionImportMapping FunctionImportName="AddtoTurkPetrol" FunctionName="GasStationModel.Store.AddtoTurkPetrol" />
+    <FunctionImportMapping FunctionImportName="getLastDay" FunctionName="GasStationModel.Store.getLastDay" />
+    <FunctionImportMapping FunctionImportName="sync_archivedata" FunctionName="GasStationModel.Store.sync_archivedata" />
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GasStationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'GasStation.dbo.archive' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="archive">
+    <Key>
+      <PropertyRef Name="date" />
+      <PropertyRef Name="benzin" />
+      <PropertyRef Name="motorin" />
+      <PropertyRef Name="otogaz" />
+    </Key>
+    <Property Name="date" Type="date" Nullable="false" />
+    <Property Name="benzin" Type="float" Nullable="false" />
+    <Property Name="motorin" Type="float" Nullable="false" />
+    <Property Name="otogaz" Type="float" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'GasStation.dbo.BP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="BP">
+    <Key>
+      <PropertyRef Name="IlceID" />
+    </Key>
+    <Property Name="IlceID" Type="int" Nullable="false" />
+    <Property Name="date" Type="date" />
+    <Property Name="benzin" Type="varchar" MaxLength="10" />
+    <Property Name="motorin" Type="varchar" MaxLength="10" />
+    <Property Name="ilce" Type="varchar" MaxLength="20" />
+    <Property Name="otogaz" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'GasStation.dbo.Future' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Future">
+          <Property Name="date" Type="date" />
+          <Property Name="benzin" Type="nchar" MaxLength="10" />
+          <Property Name="motorin" Type="nchar" MaxLength="10" />
+          <Property Name="otogaz" Type="nchar" MaxLength="10" />
+        </EntityType>-->
+  <EntityType Name="Ilceler">
+    <Key>
+      <PropertyRef Name="IlceID" />
+    </Key>
+    <Property Name="IlceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IlID" Type="int" />
+    <Property Name="Ilce" Type="varchar" MaxLength="20" />
+    <Property Name="Ilceen" Type="varchar" MaxLength="20" />
+    <Property Name="Ilceop" Type="varchar" MaxLength="20" />
+    <Property Name="Ilcebp" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Iller">
+    <Key>
+      <PropertyRef Name="IlID" />
+    </Key>
+    <Property Name="IlID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Il" Type="nvarchar" MaxLength="100" />
+    <Property Name="Ilen" Type="varchar" MaxLength="50" />
+    <Property Name="Ilop" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'GasStation.dbo.Opet' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Opet">
+    <Key>
+      <PropertyRef Name="IlceID" />
+    </Key>
+    <Property Name="IlceID" Type="int" Nullable="false" />
+    <Property Name="date" Type="date" />
+    <Property Name="benzin" Type="varchar" MaxLength="10" />
+    <Property Name="motorin" Type="varchar" MaxLength="10" />
+    <Property Name="ilce" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'GasStation.dbo.Shell' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Shell">
+    <Key>
+      <PropertyRef Name="IlceID" />
+    </Key>
+    <Property Name="IlceID" Type="int" Nullable="false" />
+    <Property Name="date" Type="date" />
+    <Property Name="benzin" Type="varchar" MaxLength="6" />
+    <Property Name="motorin" Type="varchar" MaxLength="6" />
+    <Property Name="otogaz" Type="varchar" MaxLength="6" />
+    <Property Name="ilce" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'GasStation.dbo.test' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="test">
+          <Property Name="ilceid" Type="int" />
+          <Property Name="ilce" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'GasStation.dbo.Total' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Total">
+    <Key>
+      <PropertyRef Name="IlceID" />
+    </Key>
+    <Property Name="IlceID" Type="int" Nullable="false" />
+    <Property Name="date" Type="date" />
+    <Property Name="benzin" Type="float" />
+    <Property Name="motorin" Type="float" />
+    <Property Name="otogaz" Type="float" />
+    <Property Name="ilce" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'GasStation.dbo.turkPetrol' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="turkPetrol">
+    <Key>
+      <PropertyRef Name="IlceID" />
+    </Key>
+    <Property Name="IlceID" Type="int" Nullable="false" />
+    <Property Name="date" Type="date" />
+    <Property Name="benzin" Type="varchar" MaxLength="10" />
+    <Property Name="motorin" Type="varchar" MaxLength="10" />
+    <Property Name="otogaz" Type="varchar" MaxLength="10" />
+    <Property Name="ilce" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__Ilceler__IlID__267ABA7A">
+    <End Role="Iller" Type="Self.Iller" Multiplicity="0..1" />
+    <End Role="Ilceler" Type="Self.Ilceler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Iller">
+        <PropertyRef Name="IlID" />
+      </Principal>
+      <Dependent Role="Ilceler">
+        <PropertyRef Name="IlID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BP_Ilceler">
+    <End Role="Ilceler" Type="Self.Ilceler" Multiplicity="1" />
+    <End Role="BP" Type="Self.BP" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ilceler">
+        <PropertyRef Name="IlceID" />
+      </Principal>
+      <Dependent Role="BP">
+        <PropertyRef Name="IlceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Opet_Ilceler">
+    <End Role="Ilceler" Type="Self.Ilceler" Multiplicity="1" />
+    <End Role="Opet" Type="Self.Opet" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ilceler">
+        <PropertyRef Name="IlceID" />
+      </Principal>
+      <Dependent Role="Opet">
+        <PropertyRef Name="IlceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Shell_Ilceler">
+    <End Role="Ilceler" Type="Self.Ilceler" Multiplicity="1" />
+    <End Role="Shell" Type="Self.Shell" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ilceler">
+        <PropertyRef Name="IlceID" />
+      </Principal>
+      <Dependent Role="Shell">
+        <PropertyRef Name="IlceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Total_Ilceler">
+    <End Role="Ilceler" Type="Self.Ilceler" Multiplicity="1" />
+    <End Role="Total" Type="Self.Total" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ilceler">
+        <PropertyRef Name="IlceID" />
+      </Principal>
+      <Dependent Role="Total">
+        <PropertyRef Name="IlceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_turkPetrol_Ilceler">
+    <End Role="Ilceler" Type="Self.Ilceler" Multiplicity="1" />
+    <End Role="turkPetrol" Type="Self.turkPetrol" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Ilceler">
+        <PropertyRef Name="IlceID" />
+      </Principal>
+      <Dependent Role="turkPetrol">
+        <PropertyRef Name="IlceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="addtest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="il" Type="varchar" Mode="In" />
+    <Parameter Name="ilce" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="AddtoBP" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="il" Type="varchar" Mode="In" />
+    <Parameter Name="ilce" Type="varchar" Mode="In" />
+    <Parameter Name="benzin" Type="varchar" Mode="In" />
+    <Parameter Name="motorin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="AddtoBPLpg" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="il" Type="varchar" Mode="In" />
+    <Parameter Name="otogaz" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="AddtoOpet" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="il" Type="varchar" Mode="In" />
+    <Parameter Name="ilce" Type="varchar" Mode="In" />
+    <Parameter Name="benzin" Type="varchar" Mode="In" />
+    <Parameter Name="motorin" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="AddtoShell" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="il" Type="varchar" Mode="In" />
+    <Parameter Name="ilce" Type="varchar" Mode="In" />
+    <Parameter Name="benzin" Type="varchar" Mode="In" />
+    <Parameter Name="motorin" Type="varchar" Mode="In" />
+    <Parameter Name="otogaz" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="AddtoTotal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="il" Type="varchar" Mode="In" />
+    <Parameter Name="ilce" Type="varchar" Mode="In" />
+    <Parameter Name="benzin" Type="varchar" Mode="In" />
+    <Parameter Name="motorin" Type="varchar" Mode="In" />
+    <Parameter Name="otogaz" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="AddtoTurkPetrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="il" Type="varchar" Mode="In" />
+    <Parameter Name="ilce" Type="varchar" Mode="In" />
+    <Parameter Name="benzin" Type="varchar" Mode="In" />
+    <Parameter Name="motorin" Type="varchar" Mode="In" />
+    <Parameter Name="otogaz" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="fun_getIlceId" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int">
+    <Parameter Name="il" Type="varchar" Mode="In" />
+    <Parameter Name="ilce" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="getLastDay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="marka" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="sync_archivedata" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="GasStationModelStoreContainer">
+    <EntitySet Name="Ilceler" EntityType="Self.Ilceler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Iller" EntityType="Self.Iller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="archive" EntityType="Self.archive" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [archive].[date] AS [date], 
+    [archive].[benzin] AS [benzin], 
+    [archive].[motorin] AS [motorin], 
+    [archive].[otogaz] AS [otogaz]
+    FROM [dbo].[archive] AS [archive]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="BP" EntityType="Self.BP" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [BP].[IlceID] AS [IlceID], 
+    [BP].[date] AS [date], 
+    [BP].[benzin] AS [benzin], 
+    [BP].[motorin] AS [motorin], 
+    [BP].[ilce] AS [ilce], 
+    [BP].[otogaz] AS [otogaz]
+    FROM [dbo].[BP] AS [BP]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Opet" EntityType="Self.Opet" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Opet].[IlceID] AS [IlceID], 
+    [Opet].[date] AS [date], 
+    [Opet].[benzin] AS [benzin], 
+    [Opet].[motorin] AS [motorin], 
+    [Opet].[ilce] AS [ilce]
+    FROM [dbo].[Opet] AS [Opet]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Shell" EntityType="Self.Shell" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Shell].[IlceID] AS [IlceID], 
+    [Shell].[date] AS [date], 
+    [Shell].[benzin] AS [benzin], 
+    [Shell].[motorin] AS [motorin], 
+    [Shell].[otogaz] AS [otogaz], 
+    [Shell].[ilce] AS [ilce]
+    FROM [dbo].[Shell] AS [Shell]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Total" EntityType="Self.Total" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Total].[IlceID] AS [IlceID], 
+    [Total].[date] AS [date], 
+    [Total].[benzin] AS [benzin], 
+    [Total].[motorin] AS [motorin], 
+    [Total].[otogaz] AS [otogaz], 
+    [Total].[ilce] AS [ilce]
+    FROM [dbo].[Total] AS [Total]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="turkPetrol" EntityType="Self.turkPetrol" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [turkPetrol].[IlceID] AS [IlceID], 
+    [turkPetrol].[date] AS [date], 
+    [turkPetrol].[benzin] AS [benzin], 
+    [turkPetrol].[motorin] AS [motorin], 
+    [turkPetrol].[otogaz] AS [otogaz], 
+    [turkPetrol].[ilce] AS [ilce]
+    FROM [dbo].[turkPetrol] AS [turkPetrol]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Ilceler__IlID__267ABA7A" Association="Self.FK__Ilceler__IlID__267ABA7A">
+      <End Role="Iller" EntitySet="Iller" />
+      <End Role="Ilceler" EntitySet="Ilceler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BP_Ilceler" Association="Self.FK_BP_Ilceler">
+      <End Role="Ilceler" EntitySet="Ilceler" />
+      <End Role="BP" EntitySet="BP" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Opet_Ilceler" Association="Self.FK_Opet_Ilceler">
+      <End Role="Ilceler" EntitySet="Ilceler" />
+      <End Role="Opet" EntitySet="Opet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Shell_Ilceler" Association="Self.FK_Shell_Ilceler">
+      <End Role="Ilceler" EntitySet="Ilceler" />
+      <End Role="Shell" EntitySet="Shell" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Total_Ilceler" Association="Self.FK_Total_Ilceler">
+      <End Role="Ilceler" EntitySet="Ilceler" />
+      <End Role="Total" EntitySet="Total" />
+    </AssociationSet>
+    <AssociationSet Name="FK_turkPetrol_Ilceler" Association="Self.FK_turkPetrol_Ilceler">
+      <End Role="Ilceler" EntitySet="Ilceler" />
+      <End Role="turkPetrol" EntitySet="turkPetrol" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

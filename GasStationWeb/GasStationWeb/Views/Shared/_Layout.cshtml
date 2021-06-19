@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Gas Station App</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-md fixed-top  navbar-dark" style="background-color:#1e3e6e;">
+        <!-- Brand -->
+        <div class=" container-fluid">
+
+            <a class="navbar-brand" href="/Home/Index"><img src="~/Content/FindOilLogo.png" width="50" height="50" class="d-inline-block align-top " alt="" /></a>
+
+            <!-- Toggler/collapsibe Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-lg-auto d-lg-inline-flex">
+                    <li class="nav-item" style="padding-left:10px;">
+                        @Html.ActionLink("Home", "Index", "Home",new { }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item "style="padding-left:10px;">
+                        @Html.ActionLink("FindOil", "Map", "Home",new { } ,new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item" style="padding-left:10px;">
+                        @Html.ActionLink("MobileApp", "MobileApp", "Home",new { }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item" style="padding-left:10px;">
+                        @Html.ActionLink("About", "About", "Home",new { } ,new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item" style="padding-left:10px;">
+                        @Html.ActionLink("Contact", "Contact", "Home",new { }, new { @class = "nav-link" })
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+
+            <p>&copy; @DateTime.Now.Year - Gas Station App</p>
+        </footer>
+        <div class="footer-social">
+            <div class="container-fluid">
+                <div class="social-media">
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/FindOil-101302408802675" target="_blank" class="facebook">
+
+                                <i class="fab fa-facebook-square fa-6x"></i>
+                                <br />
+                                <span>Follow</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/find_oil" target="_blank" class="twitter">
+                                <i class="fab fa-twitter-square fa-6x"></i>
+                                <br />
+                                <span>Follow</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

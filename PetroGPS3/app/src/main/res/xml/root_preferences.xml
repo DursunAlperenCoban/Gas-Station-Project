@@ -1,0 +1,46 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<!--
+    <PreferenceCategory app:title="@string/messages_header">
+
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/sync_header">
+
+        <SwitchPreferenceCompat
+            app:key="sync"
+            app:title="@string/sync_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />
+
+    </PreferenceCategory>
+-->
+    <PreferenceCategory app:title="Map">
+
+        <SeekBarPreference
+            app:key="searcharea"
+            app:title="Search Area"
+            app:summary="Change the radius of the search area for gas stations"
+            android:defaultValue="3"
+            android:max="10"
+            />
+
+        <ListPreference
+            app:defaultValue="Light"
+            app:entries="@array/map_entries"
+            app:entryValues="@array/map_values"
+            app:key="mapstyle"
+            app:title="Map Style"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+</PreferenceScreen>
